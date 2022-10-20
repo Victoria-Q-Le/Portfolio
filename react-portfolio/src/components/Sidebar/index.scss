@@ -3,20 +3,18 @@
     width: 60px;
     height: 100%;
     position: absolute;
+    top: 0;
     z-index: 3;
     min-height: 500px;
-
     .logo {
         display: block;
         padding: 8px 0;
-    }
-
-    img {
-        display: block;
-        margin: 8px auto;
-        width: 24px;
-        height: auto;
-
+        img {
+            display: block;
+            margin: 8px auto;
+            width: 24px;
+            height: auto;
+        }
         &.sub-logo {
             width: 50px;
         }
@@ -31,8 +29,7 @@ nav {
     top: 50%;
     margin-top: -120px;
     width: 100%;
-
-    a{
+    a {
         font-size: 22px;
         color: #4d4d4e;
         display: block;
@@ -40,19 +37,27 @@ nav {
         height: 51px;
         position: relative;
         text-decoration: none;
-
-        i {
-            transition: all 0.3s ease-out;
+    }
+    i {
+        transition: all 0.3s ease-out;
+    }
+    &:hover {
+        color: #ffd700;
+        svg {
+            opacity: 0;
         }
-
-        &:hover {
-            color: #ffd700;
-            svg {
-                opacity: 0;
-            }
-            &:after {
-                opacity: 1;
-            }
+        &:after {
+            opacity: 1;
         }
     }
+
+    &:after {
+        content: '';
+        font-size: 9px;
+        letter-spacing: 2px;
+        position: absolute;
+        bottom: 0;
+        display: block;
+    }
+
 }
