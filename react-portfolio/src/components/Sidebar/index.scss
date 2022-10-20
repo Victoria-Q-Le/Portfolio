@@ -37,20 +37,18 @@ nav {
         height: 51px;
         position: relative;
         text-decoration: none;
-    }
-    i {
-        transition: all 0.3s ease-out;
-    }
-    &:hover {
-        color: #ffd700;
-        svg {
+        i {
+            transition: all 0.3s ease-out;
+        }
+        &:hover {
+            color: #ffd700;
+            svg {
             opacity: 0;
         }
         &:after {
             opacity: 1;
         }
     }
-
     &:after {
         content: '';
         font-size: 9px;
@@ -58,6 +56,35 @@ nav {
         position: absolute;
         bottom: 0;
         display: block;
+        width: 100%;
+        text-align: center;
+        opacity: 0;
+        -webkit-transition: all 0.3s ease-out;
+        transition: all 0.3s ease-out;
     }
+    &:first-child {
+        &:after {
+            content: 'HOME';
+        }
+    }
+}
+
+a.about-link {
+    &:after {
+        content: 'ABOUT';
+    }
+}
+
+a.contact-link {
+    &:after {
+        content: 'CONTACT';
+    }
+}
+
+a.active {
+    svg {
+        color: #ffd700;
+    }
+}
 
 }
