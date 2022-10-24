@@ -37,6 +37,11 @@
         }
         img {
             width: 32px;
+            margin-left: 20px;
+            opacity: 0; //will add in the fading animation later
+            height: auto;
+            animation: rotateIn 1s linear both;
+            animation-delay: 1.4s;
         }
     }
 }
