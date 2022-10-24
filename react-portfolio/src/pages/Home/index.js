@@ -1,8 +1,15 @@
 import LogoTitle from '../../assets/images/logo-v.png'
 import {Link} from 'react-router-dom'
 import './index.scss'
+import { useState } from 'react'
+import AnimatedLetters from '../../components/AnimatedLetters'
+
 
 const Home = () => {
+    const [letterClass, setLetterClass] = useState('text-animate')
+    const nameArray = ['i','c','t','o','r','i','a']
+    const jobArray = ['w','e','b',' ','d','e','v','e','l','o','p','e','r']
+
     return (
         <div className='container home-page'>
             <div className='text-zone'>
@@ -11,7 +18,7 @@ const Home = () => {
                     <br /> 
                     I'm 
                     <img src={LogoTitle} alt='developer' />
-                    ictoria
+                    <AnimatedLetters letterClass={letterClass} strArray={nameArray} idx={15}/>
                     <br />
                     web developer
                 </h1>
