@@ -14,8 +14,12 @@
         margin: 0;
         font-family: Coolvetica;
         font-weight: 400;
-        &::before{
-            content: '';
+        &::before {
+            content: '<h1>';
+            font-family: 'La Belle Aurore';
+            color: #ffd700;
+            font-size: 18px;
+            position: absolute;
         }
         img {
             width: 32px;
